@@ -398,7 +398,7 @@ body {
 
 .holder__item {
   height: 50vh;
-  width: 300px;
+  width: 400px;
   border-radius: 12px;
   position: relative;
   -webkit-transition: all 0.3s ease;
@@ -411,19 +411,70 @@ body {
 
 .holder__item.active {
   height: 90vh;
-  width: 450px;
+  width: 600px;
+  -webkit-filter: blur(0);
+          filter: blur(0);
+}
+
+.holder__item.active .not-show-anything {
+  display: none;
+}
+
+.not-show-anything {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-filter: brightness(50%);
+          filter: brightness(50%);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  z-index: 10000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 12px;
+}
+
+.not-show-img {
+  border-radius: 12px;
+}
+
+.not-show-img img {
+  border-radius: 50%;
+}
+
+.overflow-not-show {
+  height: 100%;
+  overflow-x: hidden;
 }
 
 .holder__bio-img-holder {
   height: 100%;
   width: 100%;
   border-radius: 12px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .holder__bio-img-holder img {
   width: 100%;
   height: 100%;
   border-radius: 12px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .holder__btn {
@@ -439,7 +490,7 @@ body {
 }
 
 .holder__line {
-  width: 90%;
+  width: 93%;
   position: absolute;
   top: 20px;
   left: 50%;
@@ -450,13 +501,28 @@ body {
 .holder__real-line {
   width: 49%;
   height: 2px;
-  background-color: #ccc;
+  background-color: #686767;
   display: inline-block;
   border-radius: 10px;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+  position: relative;
+}
+
+.white-it {
+  width: 0;
+  height: 2px;
+  background-color: #fff;
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
 }
 
 .holder__info {
-  margin-top: 15px;
+  margin-top: 30px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -539,7 +605,7 @@ body {
 }
 
 .holder__input {
-  width: 90%;
+  width: 97%;
   position: absolute;
   left: 20px;
   bottom: 20px;

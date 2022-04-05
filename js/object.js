@@ -5,7 +5,7 @@ let elArr = [
     time : "1 h",
     media : [
       "https://picsum.photos/id/1/732/411",
-      "https://picsum.photos/id/2/732/411",
+      "https://picsum.photos/id/2/732/411"
     ],
     profilePic : "https://picsum.photos/id/5/40/40"
   },
@@ -15,7 +15,7 @@ let elArr = [
     time : "12 h",
     media : [
       "https://picsum.photos/id/3/732/411",
-      "https://picsum.photos/id/4/732/411",
+      "https://picsum.photos/id/4/732/411"
     ],
     profilePic : "https://picsum.photos/id/6/100/100"
   },
@@ -25,7 +25,7 @@ let elArr = [
     time : "3 h",
     media : [
       "https://picsum.photos/id/7/732/411",
-      "https://picsum.photos/id/8/732/411",
+      "https://picsum.photos/id/8/732/411"
     ],
     profilePic : "https://picsum.photos/id/9/100/100"
   },
@@ -35,9 +35,9 @@ let elArr = [
     time : "7 h",
     media : [
       "https://picsum.photos/id/10/732/411",
-      "https://picsum.photos/id/11/732/411",
+      "https://picsum.photos/id/11/732/411"
     ],
-    profilePic : "https://picsum.photos/id/12/100/100"
+    profilePic : "https://picsum.photos/id/80/100/100"
   },
   {
     id : 5,
@@ -45,17 +45,17 @@ let elArr = [
     time : "23 h",
     media : [
       "https://picsum.photos/id/13/732/411",
-      "https://picsum.photos/id/14/732/411",
+      "https://picsum.photos/id/14/732/411"
     ],
     profilePic : "https://picsum.photos/id/12/100/100"
   },
   {
-    id : 5,
-    name : "unknown",
-    time : "13 h",
+    id : 6,
+    name : "tohirjanovjaloliddin",
+    time : "17 h",
     media : [
       "https://picsum.photos/id/30/732/411",
-      "https://picsum.photos/id/31/732/411",
+      "https://picsum.photos/id/31/732/411"
     ],
     profilePic : "https://picsum.photos/id/33/100/100"
   }
