@@ -6,10 +6,10 @@ elArr.forEach((item, index) => {
   elItem.className = `holder__item position-relative`;
   elItem.innerHTML = `
     <span class="not-show-anything">
-      <div class="not-show-img">
-        <img src="${item.profilePic}" alt="profile">
-      </div>
     </span>
+    <div class="not-show-img">
+      <img src="${item.profilePic}" alt="profile">
+    </div>
     <div class="overflow-not-show">
       <div class="holder__bio-img-holder">
   
@@ -102,7 +102,6 @@ let elItems = elList.querySelectorAll(".holder__item");
 elItems[0].classList.add("active");
 let see = elItems[0].querySelector(".arrow-btns");
 see.style.display = "block";
-
 
 let c = Math.floor(elArr.length / 2);
 
