@@ -166,33 +166,3 @@ function changeIt(elImgContainer) {
 
   elImgContainer.style.transform = `translateX(${-stats * 335}px)`;
 }
-
-elItems.forEach((item) => {
-  item.addEventListener("click", () => {
-    if(item.classList.contains("active")){
-      let elCount = item.querySelector(".holder__bio-img-holder");
-  
-      function runIt() {
-        stats++;
-        changeIt(elCount);
-      }
-  
-      let elInterval = setInterval(runIt, 5000);
-  
-    }
-  })
-})
-
-elItems.forEach((item) => {
-  item.addEventListener("click", () => {
-    let elCount = item.querySelector(".holder__bio-img-holder");
-  
-    let elInterval = setInterval(runIt, 5000);
-
-    function runIt() {
-      stats++;
-      changeIt(elCount);
-    }
-  });
-})
-
