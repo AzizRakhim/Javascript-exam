@@ -20,7 +20,7 @@ let elArr = [
       "https://picsum.photos/id/629/585/328",
       "https://picsum.photos/id/604/585/328"
     ],
-    profilePic : "https://picsum.photos/id/494/100/100"
+    profilePic : "https://picsum.photos/id/494/32/32"
   },
   {
     id : 3,
@@ -32,7 +32,7 @@ let elArr = [
       "https://picsum.photos/id/553/585/328",
       "https://picsum.photos/id/212/585/328"
     ],
-    profilePic : "https://picsum.photos/id/524/100/100"
+    profilePic : "https://picsum.photos/id/524/32/32"
   },
   {
     id : 4,
@@ -45,7 +45,7 @@ let elArr = [
       "https://picsum.photos/id/705/585/328",
       "https://picsum.photos/id/439/585/328"
     ],
-    profilePic : "https://picsum.photos/id/201/100/100"
+    profilePic : "https://picsum.photos/id/201/32/32"
   },
   {
     id : 5,
@@ -59,7 +59,7 @@ let elArr = [
       "https://picsum.photos/id/236/585/328",
       "https://picsum.photos/id/192/585/328"
     ],
-    profilePic : "https://picsum.photos/id/141/100/100"
+    profilePic : "https://picsum.photos/id/141/32/32"
   },
   {
     id : 6,
@@ -74,6 +74,6 @@ let elArr = [
       "https://picsum.photos/id/33/585/328",
       "https://picsum.photos/id/123/585/328"
     ],
-    profilePic : "https://picsum.photos/id/191/100/100"
+    profilePic : "https://picsum.photos/id/191/32/32"
   }
 ]

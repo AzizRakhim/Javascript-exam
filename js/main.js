@@ -20,7 +20,7 @@ elArr.forEach((item, index) => {
         </div>
         <div class="holder__info">
             <div class="holder__container w-100 d-flex align-items-center">
-                <div class="holder__bio d-flex col-6 align-items-center">
+                <div class="holder__bio d-flex col-7 align-items-center">
                     <div class="holder__img-holder">
                         <img src="${item.profilePic}" alt="profile">
                     </div>
@@ -33,20 +33,20 @@ elArr.forEach((item, index) => {
                         </span>
                     </div>
                 </div>
-                <div class="holder__icons col-6 d-flex justify-content-end">
+                <div class="holder__icons col-5 d-flex justify-content-end">
                     <ul class="holder__inner-list d-flex">
-                        <li class="holder__inner-item">
-                            <button class="holder__inner-btn">
+                        <li class="holder__inner-item d-flex align-items-center">
+                            <button class="holder__inner-btn d-flex align-items-center">
                                 <i class='bx bx-play'></i>
                             </button>
                         </li>
-                        <li class="holder__inner-item">
-                            <button class="holder__inner-btn">
+                        <li class="holder__inner-item d-flex align-items-center">
+                            <button class="holder__inner-btn d-flex align-items-center">
                                 <i class='bx bxs-bell-off'></i>
                             </button>
                         </li>
-                        <li class="holder__inner-item">
-                            <button class="holder__inner-btn">
+                        <li class="holder__inner-item d-flex align-items-center">
+                            <button class="holder__inner-btn d-flex align-items-center">
                                 <i class='bx bx-dots-horizontal-rounded' ></i>
                             </button>
                         </li>
@@ -66,10 +66,10 @@ elArr.forEach((item, index) => {
     </div>
     <div class="arrow-btns">
       <button class="arrow-btn left">
-        <
+        <i class='bx bx-chevron-left'></i>
       </button>
       <button class="arrow-btn right">
-        >
+        <i class='bx bx-chevron-right'></i>
       </button>
     </div>
   `;
