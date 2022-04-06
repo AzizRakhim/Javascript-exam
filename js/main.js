@@ -3,7 +3,7 @@ let stats = 0;
 
 elArr.forEach((item, index) => {
   let elItem = document.createElement("li");
-  elItem.className = `holder__item position-relative ${index + 1}`;
+  elItem.className = `holder__item position-relative`;
   elItem.innerHTML = `
     <span class="not-show-anything">
       <div class="not-show-img">
@@ -15,17 +15,8 @@ elArr.forEach((item, index) => {
   
       </div>
       <div class="holder__btn">
-        <div class="holder__line d-flex justify-content-between">
-            <span class="holder__real-line">
-              <span class="white-it holder-bg-one">
-              
-              </span>
-            </span>
-            <span class="holder__real-line">
-              <span class="white-it holder-bg-two">
-                
-              </span>
-            </span>
+        <div class="holder__line d-flex">
+            
         </div>
         <div class="holder__info">
             <div class="holder__container w-100 d-flex align-items-center">
@@ -91,6 +82,18 @@ elArr.forEach((item, index) => {
   }); 
   elImgKeep.innerHTML = emptyArr;
 
+  let elHolderLine = elItem.querySelector(".holder__line");
+  let lineArr = item.media.map((el) => {
+    return `
+      <span class="holder__real-line">
+        <span class="white-it holder-bg-one">
+    
+        </span>
+      </span>
+    `;
+  }); 
+  elHolderLine.innerHTML = lineArr.join("");
+
   let elBg = elItem.querySelector(".not-show-anything");
   elBg.style.backgroundImage = `url("${item.media[0]}")`
 });
@@ -110,11 +113,11 @@ elItems.forEach((item, idx) => {
     checkIt();
     if(count < idx){
       count++;
-      elList.style.transform = `translate(${-count * 460}px)`;
+      elList.style.transform = `translate(${-idx * 212}px)`;
       stats = 0;
     } else if(count > idx){
       count--;
-      elList.style.transform = `translate(${-count * 460}px)`;
+      elList.style.transform = `translate(${-idx * 212}px)`;
       stats = 0;
     }
   });
@@ -133,74 +136,63 @@ function checkIt() {
       see.style.display = "none";
     }
   });
-
-  elItems.forEach((item) => {
-    let elRealNum = 0;
-    let secund = 5;
-
-    let elRealNumTwo = 1;
-    let secundTwo = 5;
-
-    if(item.classList.contains('active')){
-      const elRight = item.querySelector('.right');
-      const elLeft = item.querySelector('.left');
-      let elImgContainer = item.querySelector(".holder__bio-img-holder");
-      let elONe = item.querySelector(".holder-bg-one");
-      let elTwo = item.querySelector(".holder-bg-two");
-
-      function run() {
-        if(elRealNum < 5){
-          elONe.style.width = `${secund += 19}%`;
-          elRealNum++;
-        } else{
-          clearInterval(y);
-          function runTwo() {
-            if(elRealNumTwo <= 5){
-              elTwo.style.width = `${secundTwo += 19}%`;
-              elRealNumTwo++;
-            } else{
-              clearInterval(v);
-            }
-          }
-    
-          let v = setInterval(runTwo, 760);
-        }
-      }
-
-      let y = setInterval(run, 1000);
-
-      let a = setInterval(function() {
-        stats++;
-        changeIt(elImgContainer);
-      }, 5000);
-
-      elRight.addEventListener('click', () => {
-        stats++;
-        changeIt(elImgContainer);
-        clearInterval(a);
-        clearInterval(y); 
-      });
-      elLeft.addEventListener("click", () => {
-        stats--;
-        changeIt(elImgContainer);
-        clearInterval(a);
-        clearInterval(y)
-      });
-    }
-  }); 
 }
+
+let elRight = document.querySelectorAll(".right");
+let elLeft = document.querySelectorAll(".left");
+let elImgContainer = document.querySelectorAll(".holder__bio-img-holder");
+
+elRight.forEach((item, index) => {
+  item.addEventListener("click", () => {
+    stats++;
+    changeIt(elImgContainer[index]);
+  });
+});
+
+elLeft.forEach((item, index) => {
+  item.addEventListener("click", () => {
+    stats--;
+    changeIt(elImgContainer[index]);
+  });
+});
 
 function changeIt(elImgContainer) {
   let elImgCount = elImgContainer.querySelectorAll("img");
   if(stats > elImgCount.length - 1){
-    stats = 0;
-  } else if(stats < 0){
     stats = elImgCount.length - 1;
+  } else if(stats < 0){
+    stats = 0;
   }
-  elImgContainer.style.transform = `translateX(${-stats * 600}px)`;
+
+  elImgContainer.style.transform = `translateX(${-stats * 335}px)`;
 }
 
+elItems.forEach((item) => {
+  item.addEventListener("click", () => {
+    if(item.classList.contains("active")){
+      let elCount = item.querySelector(".holder__bio-img-holder");
+  
+      function runIt() {
+        stats++;
+        changeIt(elCount);
+      }
+  
+      let elInterval = setInterval(runIt, 5000);
+  
+    }
+  })
+})
 
+elItems.forEach((item) => {
+  item.addEventListener("click", () => {
+    let elCount = item.querySelector(".holder__bio-img-holder");
+  
+    let elInterval = setInterval(runIt, 5000);
 
-
+    function runIt() {
+      stats++;
+      changeIt(elCount);
+    }
+  });
+})
 
